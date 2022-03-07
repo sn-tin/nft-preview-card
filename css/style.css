@@ -110,6 +110,7 @@ main {
     display: flex;
     align-items: center;
     border-top: thin solid rgba(218, 216, 216, 0.337);
+    padding: 3px 0 8px;
 }
 
 .creator-name {
