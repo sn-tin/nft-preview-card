@@ -1,0 +1,134 @@
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-size: 18px;
+    font-family: 'Outfit';
+    font-weight: 300;
+}
+
+h1 {
+    color: hsl(0, 0%, 100%) ;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 800;
+}
+
+h1:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+p {
+    color: hsl(215, 51%, 70%);
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+/* Main Card */
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.card {
+    width: 320px;
+    margin: 50px auto;
+    padding: 5px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 1rem;
+}
+
+.card-text {
+    margin: 15px 0;
+}
+
+.card-img-top {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 16px;
+}
+
+.image-container::after {
+    content: url(../images/icon-view.svg);
+    background-color: hsla(178, 100%, 50%, 0.329);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.image-container:hover::after { 
+    opacity: 1; 
+}
+
+/* Price */
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+.price {
+    color: hsl(178, 100%, 50%);
+
+  
+}
+
+.price::before {
+    content: "";
+    background: url(../images/icon-ethereum.svg) no-repeat center;
+    padding: 0 0.7rem;
+}
+
+.day {
+    color: hsl(215, 51%, 70%);
+}
+
+.day::before {
+    content: "";
+    background: url(../images/icon-clock.svg) no-repeat center;
+    padding: 0 0.7rem;
+}
+
+.price, .day, .creator-name {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+/* Creator Details */
+
+.creator {
+    display: flex;
+    align-items: center;
+    border-top: thin solid rgba(218, 216, 216, 0.337);
+}
+
+.creator-name {
+    margin-top: 16px;
+}
+
+.creator-image {
+    max-width: 10%;
+    border: thin solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.creator-name span {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+}
+
+.creator-name span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
